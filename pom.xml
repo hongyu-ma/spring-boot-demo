@@ -3,6 +3,7 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
+
   <groupId>com.example</groupId>
   <artifactId>multi-modules</artifactId>
   <packaging>pom</packaging>
@@ -10,6 +11,8 @@
 
   <modules>
     <module>common</module>
+    <module>dao</module>
+    <module>manage</module>
 
   </modules>
 
@@ -19,8 +22,6 @@
 
   <build>
     <plugins>
-
     </plugins>
   </build>
-
 </project>

@@ -1,5 +1,8 @@
 package com.example.manage.controller;
 
+import com.example.model.EntryCalendar;
+import com.example.manage.service.ManageService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,9 +15,18 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ManageController {
 
+  @Autowired
+  private ManageService manageService;
+
   @RequestMapping("/")
   public String HelloWorld() {
     return "hello world!";
   }
 
+  @RequestMapping("/test")
+  public EntryCalendar getElement() {
+
+    EntryCalendar ele = manageService.getById(108L);
+    return ele;
+  }
 }
