@@ -25,7 +25,7 @@ public class ManageController {
 
   @RequestMapping("/test")
   public EntryCalendar getElement() {
-
+    /*测试持久层连接*/
     EntryCalendar ele = manageService.getById(108L);
     return ele;
   }

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+
+  <context id="DB2Tables" targetRuntime="MyBatis3">
+    <commentGenerator>
+      <property name="suppressAllComments" value="true" />
+    </commentGenerator>
+    <!-- mysql-->
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+      connectionURL="jdbc:mysql://127.0.0.1:3306/{tableName}"
+      userId="" password="">
+    </jdbcConnection>
+    <!-- ORACLE-->
+    <!--<jdbcConnection driverClass="oracle.jdbc.d  river.OracleDriver"
+      connectionURL="jdbc:oracle:thin:  @(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=192.168.178.213)(PORT=1521)))(CONNECT_DATA=(SERVICE_NAME=MDUAT)(SERVER=DEDICATED)))"
+      userId="JDHR" password="jdhrzyc123">
+    </jdbcConnection>-->
+    <javaTypeResolver>
+      <property name="forceBigDecimals" value="false" />
+    </javaTypeResolver>
+
+    <javaModelGenerator targetPackage="com.example.model" targetProject="src/main/java">
+      <property name="enableSubPackages" value="true" />
+      <property name="trimStrings" value="true" />
+    </javaModelGenerator>
+    <sqlMapGenerator targetPackage="mapper"  targetProject="src/main/resources">
+      <property name="enableSubPackages" value="true" />
+    </sqlMapGenerator>
+    <javaClientGenerator type="XMLMAPPER" targetPackage="com.example.dao.mapper" targetProject="src/main/java">
+      <property name="enableSubPackages" value="true" />
+    </javaClientGenerator>
+
+    <!--schema="untodo" 当连接oracle时去掉-->
+    <table tableName="{}" domainObjectName="" enableCountByExample="false" enableUpdateByExample="false"
+      enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+    </table>
+
+  </context>
+
+</generatorConfiguration>

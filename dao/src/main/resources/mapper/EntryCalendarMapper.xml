@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.dao.EntryCalendarMapper">
+  <resultMap id="BaseResultMap" type="com.example.model.EntryCalendar">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="tenant_code" jdbcType="VARCHAR" property="tenantCode" />
+    <result column="entry_site_code" jdbcType="VARCHAR" property="entrySiteCode" />
+    <result column="date" jdbcType="DATE" property="date" />
+    <result column="total_number" jdbcType="INTEGER" property="totalNumber" />
+    <result column="current_number" jdbcType="INTEGER" property="currentNumber" />
+    <result column="status" jdbcType="CHAR" property="status" />
+    <result column="create_oprid" jdbcType="VARCHAR" property="createOprid" />
+    <result column="create_dttm" jdbcType="TIMESTAMP" property="createDttm" />
+    <result column="last_upd_oprid" jdbcType="VARCHAR" property="lastUpdOprid" />
+    <result column="last_upd_dttm" jdbcType="TIMESTAMP" property="lastUpdDttm" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, tenant_code, entry_site_code, date, total_number, current_number, status, create_oprid, 
+    create_dttm, last_upd_oprid, last_upd_dttm
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from jd_entry_calendar
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from jd_entry_calendar
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.example.model.EntryCalendar">
+    insert into jd_entry_calendar (id, tenant_code, entry_site_code, 
+      date, total_number, current_number, 
+      status, create_oprid, create_dttm, 
+      last_upd_oprid, last_upd_dttm)
+    values (#{id,jdbcType=BIGINT}, #{tenantCode,jdbcType=VARCHAR}, #{entrySiteCode,jdbcType=VARCHAR}, 
+      #{date,jdbcType=DATE}, #{totalNumber,jdbcType=INTEGER}, #{currentNumber,jdbcType=INTEGER}, 
+      #{status,jdbcType=CHAR}, #{createOprid,jdbcType=VARCHAR}, #{createDttm,jdbcType=TIMESTAMP}, 
+      #{lastUpdOprid,jdbcType=VARCHAR}, #{lastUpdDttm,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.model.EntryCalendar">
+    insert into jd_entry_calendar
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="tenantCode != null">
+        tenant_code,
+      </if>
+      <if test="entrySiteCode != null">
+        entry_site_code,
+      </if>
+      <if test="date != null">
+        date,
+      </if>
+      <if test="totalNumber != null">
+        total_number,
+      </if>
+      <if test="currentNumber != null">
+        current_number,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="createOprid != null">
+        create_oprid,
+      </if>
+      <if test="createDttm != null">
+        create_dttm,
+      </if>
+      <if test="lastUpdOprid != null">
+        last_upd_oprid,
+      </if>
+      <if test="lastUpdDttm != null">
+        last_upd_dttm,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="tenantCode != null">
+        #{tenantCode,jdbcType=VARCHAR},
+      </if>
+      <if test="entrySiteCode != null">
+        #{entrySiteCode,jdbcType=VARCHAR},
+      </if>
+      <if test="date != null">
+        #{date,jdbcType=DATE},
+      </if>
+      <if test="totalNumber != null">
+        #{totalNumber,jdbcType=INTEGER},
+      </if>
+      <if test="currentNumber != null">
+        #{currentNumber,jdbcType=INTEGER},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=CHAR},
+      </if>
+      <if test="createOprid != null">
+        #{createOprid,jdbcType=VARCHAR},
+      </if>
+      <if test="createDttm != null">
+        #{createDttm,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastUpdOprid != null">
+        #{lastUpdOprid,jdbcType=VARCHAR},
+      </if>
+      <if test="lastUpdDttm != null">
+        #{lastUpdDttm,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.model.EntryCalendar">
+    update jd_entry_calendar
+    <set>
+      <if test="tenantCode != null">
+        tenant_code = #{tenantCode,jdbcType=VARCHAR},
+      </if>
+      <if test="entrySiteCode != null">
+        entry_site_code = #{entrySiteCode,jdbcType=VARCHAR},
+      </if>
+      <if test="date != null">
+        date = #{date,jdbcType=DATE},
+      </if>
+      <if test="totalNumber != null">
+        total_number = #{totalNumber,jdbcType=INTEGER},
+      </if>
+      <if test="currentNumber != null">
+        current_number = #{currentNumber,jdbcType=INTEGER},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=CHAR},
+      </if>
+      <if test="createOprid != null">
+        create_oprid = #{createOprid,jdbcType=VARCHAR},
+      </if>
+      <if test="createDttm != null">
+        create_dttm = #{createDttm,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastUpdOprid != null">
+        last_upd_oprid = #{lastUpdOprid,jdbcType=VARCHAR},
+      </if>
+      <if test="lastUpdDttm != null">
+        last_upd_dttm = #{lastUpdDttm,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.model.EntryCalendar">
+    update jd_entry_calendar
+    set tenant_code = #{tenantCode,jdbcType=VARCHAR},
+      entry_site_code = #{entrySiteCode,jdbcType=VARCHAR},
+      date = #{date,jdbcType=DATE},
+      total_number = #{totalNumber,jdbcType=INTEGER},
+      current_number = #{currentNumber,jdbcType=INTEGER},
+      status = #{status,jdbcType=CHAR},
+      create_oprid = #{createOprid,jdbcType=VARCHAR},
+      create_dttm = #{createDttm,jdbcType=TIMESTAMP},
+      last_upd_oprid = #{lastUpdOprid,jdbcType=VARCHAR},
+      last_upd_dttm = #{lastUpdDttm,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>
