@@ -27,13 +27,14 @@ public class ManageController {
 
   @RequestMapping("/test")
   public EntryCalendar getElement() {
-    /*测试持久层连接*/
+    /**测试持久层连接*/
     EntryCalendar ele = manageService.getById(108L);
     return ele;
   }
 
   @RequestMapping("/json")
   public JsonVo jsonTransfer() {
+    /**测试jsonUtil工具包*/
     String str = "{\"originSys\":2,\"visitorType\":1,\"sendTimeMillis\":1573113868103,\"bespeakCode\":\"353100\",\"userErp\":\"xiayanghui\",\"visitTime\":\"2019-11-07\",\"visitorMobile\":\"18810583718\",\"workplaceID\":1}";
     JsonVo vo = JsonUtil.toObject(str, JsonVo.class);
     return vo;

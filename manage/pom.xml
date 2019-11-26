@@ -27,6 +27,7 @@
   </properties>
 
   <dependencies>
+    <!--web-->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
@@ -35,19 +36,30 @@
           <groupId>org.springframework.boot</groupId>
           <artifactId>spring-boot-starter-tomcat</artifactId>
         </exclusion>
+        <!-- 此处排除一定要添加，否则不能输出日志到日志文件 -->
+        <exclusion>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-logging</artifactId>
+        </exclusion>
       </exclusions>
     </dependency>
-
+    <!--tomcat-->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-tomcat</artifactId>
       <scope>provided</scope>
     </dependency>
-
+    <!--test-->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
       <scope>test</scope>
+    </dependency>
+    <!-- 通用依赖 -->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <scope>provided</scope>
     </dependency>
     <!--common-->
     <dependency>
@@ -61,12 +73,22 @@
       <artifactId>dao</artifactId>
       <version>${dao.version}</version>
     </dependency>
-
     <!--pagehelper-->
     <dependency>
       <groupId>com.github.pagehelper</groupId>
       <artifactId>pagehelper-spring-boot-starter</artifactId>
       <version>${pagehelper.version}</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>mybatis-spring-boot-starter</artifactId>
+          <groupId>org.mybatis.spring.boot</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <!--log4j2-->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-log4j2</artifactId>
     </dependency>
   </dependencies>
 
