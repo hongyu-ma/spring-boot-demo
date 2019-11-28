@@ -9,4 +9,6 @@ import com.example.model.EntryCalendar;
 public interface ManageService {
 
   EntryCalendar getById(Long id);
+
+  void reportExport() throws Exception;
 }

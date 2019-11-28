@@ -3,15 +3,16 @@ package com.example.dao;
 import com.example.model.EntryCalendar;
 
 public interface EntryCalendarMapper {
-    int deleteByPrimaryKey(Long id);
 
-    int insert(EntryCalendar record);
+  int deleteByPrimaryKey(Long id);
 
-    int insertSelective(EntryCalendar record);
+  int insert(EntryCalendar record);
 
-    EntryCalendar selectByPrimaryKey(Long id);
+  int insertSelective(EntryCalendar record);
 
-    int updateByPrimaryKeySelective(EntryCalendar record);
+  EntryCalendar selectByPrimaryKey(Long id);
 
-    int updateByPrimaryKey(EntryCalendar record);
+  int updateByPrimaryKeySelective(EntryCalendar record);
+
+  int updateByPrimaryKey(EntryCalendar record);
 }

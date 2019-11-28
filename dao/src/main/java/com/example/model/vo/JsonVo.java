@@ -8,6 +8,7 @@ import lombok.Data;
  */
 @Data
 public class JsonVo {
+
   private Integer originSys;
   private String userErp;
   private String visitorMobile;

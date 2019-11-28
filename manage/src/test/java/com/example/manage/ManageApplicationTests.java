@@ -28,7 +28,6 @@ class ManageApplicationTests {
     System.out.println("m" + m + ", n" + n);
 
 
-
   }
 
 }

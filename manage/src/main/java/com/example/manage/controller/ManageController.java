@@ -4,15 +4,14 @@ import com.example.common.utils.DateUtil;
 import com.example.common.utils.JsonUtil;
 import com.example.common.utils.VoUtil;
 import com.example.manage.model.vo.EntryCalendarVo;
-import com.example.model.EntryCalendar;
 import com.example.manage.service.ManageService;
+import com.example.model.EntryCalendar;
 import com.example.model.vo.JsonVo;
-import com.sun.org.apache.xpath.internal.SourceTree;
 import java.text.ParseException;
 import java.util.Date;
 import java.util.List;
-import javax.swing.plaf.metal.MetalIconFactory.FolderIcon16;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -67,6 +66,13 @@ public class ManageController {
 
     System.out.println(DateUtil.dayFormat(ele.getDate()));
     return VoUtil.convert(ele, EntryCalendarVo.class);
+  }
+
+  @GetMapping("/export")
+  public String reportExport() throws Exception {
+    /**测试report模块*/
+    manageService.reportExport();
+    return "success";
   }
 
 }

@@ -158,7 +158,9 @@ public class DateUtil {
     return calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
   }
 
-  /**获取周几*/
+  /**
+   * 获取周几
+   */
   public static String getWeek(Date date) {
     String[] weeks = {"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
     Calendar cal = Calendar.getInstance();
@@ -183,7 +185,6 @@ public class DateUtil {
    * @param smdate 较小的时间
    * @param bdate 较大的时间
    * @return 相差天数
-   * @throws ParseException
    */
   public static int daysBetween(Date smdate, Date bdate) {
     try {
@@ -204,7 +205,9 @@ public class DateUtil {
     return 0;
   }
 
-  /**获取时间段的所有天*/
+  /**
+   * 获取时间段的所有天
+   */
   public static List<Date> findBetweenDays(Date begin, Date end) {
     List<Date> dayList = new ArrayList<>();
     try {

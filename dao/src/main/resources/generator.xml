@@ -20,22 +20,24 @@
       userId="JDHR" password="jdhrzyc123">
     </jdbcConnection>-->
     <javaTypeResolver>
-      <property name="forceBigDecimals" value="false" />
+      <property name="forceBigDecimals" value="false"/>
     </javaTypeResolver>
 
     <javaModelGenerator targetPackage="com.example.model" targetProject="src/main/java">
-      <property name="enableSubPackages" value="true" />
-      <property name="trimStrings" value="true" />
+      <property name="enableSubPackages" value="true"/>
+      <property name="trimStrings" value="true"/>
     </javaModelGenerator>
-    <sqlMapGenerator targetPackage="mapper"  targetProject="src/main/resources">
-      <property name="enableSubPackages" value="true" />
+    <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources">
+      <property name="enableSubPackages" value="true"/>
     </sqlMapGenerator>
-    <javaClientGenerator type="XMLMAPPER" targetPackage="com.example.dao.mapper" targetProject="src/main/java">
-      <property name="enableSubPackages" value="true" />
+    <javaClientGenerator type="XMLMAPPER" targetPackage="com.example.dao.mapper"
+      targetProject="src/main/java">
+      <property name="enableSubPackages" value="true"/>
     </javaClientGenerator>
 
     <!--schema="untodo" 当连接oracle时去掉-->
-    <table tableName="{}" domainObjectName="" enableCountByExample="false" enableUpdateByExample="false"
+    <table tableName="{}" domainObjectName="" enableCountByExample="false"
+      enableUpdateByExample="false"
       enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
     </table>
 

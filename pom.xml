@@ -13,7 +13,7 @@
     <module>common</module>
     <module>dao</module>
     <module>manage</module>
-
+    <module>report</module>
   </modules>
 
   <dependencyManagement>

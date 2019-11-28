@@ -23,6 +23,7 @@
     <!--common.version-->
     <common.version>0.0.1-dev-SNAPSHOT</common.version>
     <dao.version>0.0.1-SNAPSHOT</dao.version>
+    <report.version>0.0.1-SNAPSHOT</report.version>
     <pagehelper.version>1.2.5</pagehelper.version>
   </properties>
 
@@ -72,6 +73,12 @@
       <groupId>com.example</groupId>
       <artifactId>dao</artifactId>
       <version>${dao.version}</version>
+    </dependency>
+    <!--report-->
+    <dependency>
+      <groupId>com.example</groupId>
+      <artifactId>report</artifactId>
+      <version>${report.version}</version>
     </dependency>
     <!--pagehelper-->
     <dependency>

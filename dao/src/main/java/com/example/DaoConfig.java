@@ -10,4 +10,5 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @MapperScan("com.example.dao")
 public class DaoConfig {
+
 }

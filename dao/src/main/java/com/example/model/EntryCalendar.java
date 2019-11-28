@@ -3,113 +3,114 @@ package com.example.model;
 import java.util.Date;
 
 public class EntryCalendar {
-    private Long id;
 
-    private String tenantCode;
+  private Long id;
 
-    private String entrySiteCode;
+  private String tenantCode;
 
-    private Date date;
+  private String entrySiteCode;
 
-    private Integer totalNumber;
+  private Date date;
 
-    private Integer currentNumber;
+  private Integer totalNumber;
 
-    private String status;
+  private Integer currentNumber;
 
-    private String createOprid;
+  private String status;
 
-    private Date createDttm;
+  private String createOprid;
 
-    private String lastUpdOprid;
+  private Date createDttm;
 
-    private Date lastUpdDttm;
+  private String lastUpdOprid;
 
-    public Long getId() {
-        return id;
-    }
+  private Date lastUpdDttm;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+  public Long getId() {
+    return id;
+  }
 
-    public String getTenantCode() {
-        return tenantCode;
-    }
+  public void setId(Long id) {
+    this.id = id;
+  }
 
-    public void setTenantCode(String tenantCode) {
-        this.tenantCode = tenantCode == null ? null : tenantCode.trim();
-    }
+  public String getTenantCode() {
+    return tenantCode;
+  }
 
-    public String getEntrySiteCode() {
-        return entrySiteCode;
-    }
+  public void setTenantCode(String tenantCode) {
+    this.tenantCode = tenantCode == null ? null : tenantCode.trim();
+  }
 
-    public void setEntrySiteCode(String entrySiteCode) {
-        this.entrySiteCode = entrySiteCode == null ? null : entrySiteCode.trim();
-    }
+  public String getEntrySiteCode() {
+    return entrySiteCode;
+  }
 
-    public Date getDate() {
-        return date;
-    }
+  public void setEntrySiteCode(String entrySiteCode) {
+    this.entrySiteCode = entrySiteCode == null ? null : entrySiteCode.trim();
+  }
 
-    public void setDate(Date date) {
-        this.date = date;
-    }
+  public Date getDate() {
+    return date;
+  }
 
-    public Integer getTotalNumber() {
-        return totalNumber;
-    }
+  public void setDate(Date date) {
+    this.date = date;
+  }
 
-    public void setTotalNumber(Integer totalNumber) {
-        this.totalNumber = totalNumber;
-    }
+  public Integer getTotalNumber() {
+    return totalNumber;
+  }
 
-    public Integer getCurrentNumber() {
-        return currentNumber;
-    }
+  public void setTotalNumber(Integer totalNumber) {
+    this.totalNumber = totalNumber;
+  }
 
-    public void setCurrentNumber(Integer currentNumber) {
-        this.currentNumber = currentNumber;
-    }
+  public Integer getCurrentNumber() {
+    return currentNumber;
+  }
 
-    public String getStatus() {
-        return status;
-    }
+  public void setCurrentNumber(Integer currentNumber) {
+    this.currentNumber = currentNumber;
+  }
 
-    public void setStatus(String status) {
-        this.status = status == null ? null : status.trim();
-    }
+  public String getStatus() {
+    return status;
+  }
 
-    public String getCreateOprid() {
-        return createOprid;
-    }
+  public void setStatus(String status) {
+    this.status = status == null ? null : status.trim();
+  }
 
-    public void setCreateOprid(String createOprid) {
-        this.createOprid = createOprid == null ? null : createOprid.trim();
-    }
+  public String getCreateOprid() {
+    return createOprid;
+  }
 
-    public Date getCreateDttm() {
-        return createDttm;
-    }
+  public void setCreateOprid(String createOprid) {
+    this.createOprid = createOprid == null ? null : createOprid.trim();
+  }
 
-    public void setCreateDttm(Date createDttm) {
-        this.createDttm = createDttm;
-    }
+  public Date getCreateDttm() {
+    return createDttm;
+  }
 
-    public String getLastUpdOprid() {
-        return lastUpdOprid;
-    }
+  public void setCreateDttm(Date createDttm) {
+    this.createDttm = createDttm;
+  }
 
-    public void setLastUpdOprid(String lastUpdOprid) {
-        this.lastUpdOprid = lastUpdOprid == null ? null : lastUpdOprid.trim();
-    }
+  public String getLastUpdOprid() {
+    return lastUpdOprid;
+  }
 
-    public Date getLastUpdDttm() {
-        return lastUpdDttm;
-    }
+  public void setLastUpdOprid(String lastUpdOprid) {
+    this.lastUpdOprid = lastUpdOprid == null ? null : lastUpdOprid.trim();
+  }
 
-    public void setLastUpdDttm(Date lastUpdDttm) {
-        this.lastUpdDttm = lastUpdDttm;
-    }
+  public Date getLastUpdDttm() {
+    return lastUpdDttm;
+  }
+
+  public void setLastUpdDttm(Date lastUpdDttm) {
+    this.lastUpdDttm = lastUpdDttm;
+  }
 }
