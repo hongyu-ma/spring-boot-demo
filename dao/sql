@@ -1,0 +1,16 @@
+CREATE TABLE `jd_entry_calendar` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键ID',
+  `tenant_code` varchar(30) NOT NULL COMMENT '租户ID',
+  `entry_site_code` varchar(32) NOT NULL COMMENT '场地编码',
+  `date` date NOT NULL COMMENT '日期',
+  `total_number` int(10) NOT NULL COMMENT '场地名额',
+  `current_number` int(10) NOT NULL COMMENT '当前使用名额',
+  `status` char(1) DEFAULT '1' COMMENT '有效状态',
+  `create_oprid` varchar(50) NOT NULL COMMENT '创建者',
+  `create_dttm` datetime NOT NULL COMMENT '创建时间',
+  `last_upd_oprid` varchar(50) NOT NULL COMMENT '修改者',
+  `last_upd_dttm` datetime NOT NULL COMMENT '修改时间',
+  PRIMARY KEY (`id`),
+  KEY `idx_tenant_code` (`tenant_code`),
+  KEY `idx_entry_site_code` (`entry_site_code`)
+) ENGINE=InnoDB AUTO_INCREMENT=139 DEFAULT CHARSET=utf8;
