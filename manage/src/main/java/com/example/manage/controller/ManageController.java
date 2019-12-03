@@ -75,4 +75,11 @@ public class ManageController {
     return "success";
   }
 
+  @GetMapping("/interceptor")
+  public String interceptor() {
+    /**测试interceptor*/
+    String str = "我在测试interceptor";
+    return str;
+  }
+
 }
